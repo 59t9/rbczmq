@@ -87,6 +87,7 @@ when /aix/
 
 when /linux/
   CZMQ_CFLAGS << "-fPIC"
+  CZMQ_CFLAGS << "-Wno-error=deprecated-declarations"
 
 else
   # on Unix we need a g++ link, not gcc.
