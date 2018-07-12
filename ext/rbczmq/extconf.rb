@@ -159,7 +159,7 @@ fail "Error compiling and linking libczmq" unless have_library("czmq")
 
 $defs << "-pedantic"
 
-$CFLAGS  << ' -Wall -funroll-loops'
+$CFLAGS  << ' -Wall -funroll-loops -Wno-error=deprecated-declarations'
 $CFLAGS  << ' -Wextra -O0 -ggdb3' if ENV['DEBUG']
 $LDFLAGS << " -Wl,-rpath,ext/rbczmq/dst/lib/"
 
